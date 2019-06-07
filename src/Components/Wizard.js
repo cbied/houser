@@ -3,7 +3,7 @@ import store, {
     UPDATE_NAME, UPDATE_ADDRESS, 
     UPDATE_CITY, UPDATE_STATE,
     UPDATE_ZIP
-} from '../store/reducer'
+} from '../store/store'
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -29,13 +29,14 @@ class Wizard extends Component {
   }
 
   makePost() {
+    let { name, address, city, state, zip } = this.state
     axios
       .post("/api/properties", {
-        name: this.name,
-        address: this.address,
-        city: this.city,
-        state: this.state,
-        zip: this.zip
+        name: name,
+        address: address,
+        city: city,
+        state: state,
+        zip: zip
       })
       .then(response => {
           console.log(response)
@@ -90,7 +91,10 @@ saveChanges() {
 
 
   render() {
+    let { name, address, city, state, zip } = this.state
+    console.log(name, address, city, state, zip)
     return (
+        
       <div className="Wizard">
         <div className="container">
           <h3>Property Name</h3>
