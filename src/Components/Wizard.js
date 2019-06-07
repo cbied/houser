@@ -95,8 +95,8 @@ saveChanges() {
     console.log(name, address, city, state, zip)
     return (
         
-      <div className="Wizard">
-        <div className="container">
+      <div>
+        <div className="container display">
           <h3>Property Name</h3>
           <input type="text" name='name'  value={this.name} onChange={this.handleChange} />
           <h3>Address</h3>
@@ -107,14 +107,16 @@ saveChanges() {
           <input type="text" name='state' onChange={this.handleChange} />
           <h3>Zip</h3>
           <input type="text" name='zip' onChange={this.handleChange} />
+          <div className="buttons">
           <Link to="/">
           <button className="cancel" onClick={this.cancel}>
             Cancel
           </button>
           </Link>
           <Link to="/">
-            <button onClick={event => this.makePost(this.props)}>Submit</button>
+            <button className="submit" onClick={() => this.makePost(this.props)}>Submit</button>
           </Link>
+          </div>
         </div>
       </div>
     );

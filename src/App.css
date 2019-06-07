@@ -1,3 +1,5 @@
+
+/* Header component */
 .Header {
 	display: flex;
 	align-items: center;
@@ -14,12 +16,69 @@
 	margin-right: 5vw;
 }
 
-.Header a {
-	text-align: center;
-	text-decoration: none;
-	color: #AB2A19;
-	background: white;
-	border-radius: 20px;
-	padding: 2px 8px;
-	margin: 0 8px;
+
+/* Wizard Component */
+
+.container {
+	background-color: #e5f4ec;
+	width: 130vh;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	/* position: relative; */
+	flex-direction: column;
+	margin: 0 auto;
+  }
+
+  .container button {
+	  border-radius: 15px;
+  }
+
+  .buttons {
+	  display: flex;
+	  margin: 1rem;
+	  justify-content: space-evenly;
+  }
+
+  .cancel {
+	  background-color: red;
+	  margin-right: 1rem;
+  }
+
+  .submit {
+	  background-color: #519872;
+  }
+
+  /* Dashboard component */
+  .listing-container {
+	width: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	padding-left: 5vh;
+	background-color: #dedede;
+	margin-bottom: 1rem;
+  }
+
+  .addProp {
+	margin: 1rem;
+	align-self: flex-end;
+	background-color: #8AEA92;
+	width: 15vw;
+	height: 10vh;
+	font-size: 1.3rem;
+	border-bottom: 1px solid black;
+  }
+
+.dashboard {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	margin-bottom: 1rem;
+	width: 50vw;
 }
+
+  .link {
+	text-decoration: none;
+	color:black
+  }
