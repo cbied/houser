@@ -1,0 +1,25 @@
+.Header {
+	display: flex;
+	align-items: center;
+	background: #519872;
+	color: white;
+}
+
+.Header img {
+	margin: 0 1% 0 5%;
+	height: 6vh;
+}
+
+.Header .title {
+	margin-right: 5vw;
+}
+
+.Header a {
+	text-align: center;
+	text-decoration: none;
+	color: #AB2A19;
+	background: white;
+	border-radius: 20px;
+	padding: 2px 8px;
+	margin: 0 8px;
+}
